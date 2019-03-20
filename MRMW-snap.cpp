@@ -21,6 +21,7 @@ atomic_int** HELPSNAP;
 //int num, lambda1 ,lambda2 ,k;
 atomic_bool term;
 float avg_time = 0;
+float avg_time2 = 0;
 
 class MRMWSnap
 {
