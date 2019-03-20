@@ -10,7 +10,7 @@
 
 //using namespace std;
 
-atomic_int** HELPSNAP;
+//atomic_int** HELPSNAP;
 //int num, lambda1 ,lambda2 ,k;
 atomic_bool term;
 
