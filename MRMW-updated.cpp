@@ -14,7 +14,7 @@
 //int num, lambda1 ,lambda2 ,k;
 atomic_bool term;
 
-
+// this is a sample code
 class MRMWSnap
 {
 	public:
