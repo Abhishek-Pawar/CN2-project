@@ -87,7 +87,7 @@ class MRMWSnap
 
 					for (int i = 0; i < num ; i++)
 					{
-						ans[i].store(bb[i].value , memory_order_relaxed);
+						//ans[i].store(bb[i].value , memory_order_relaxed);
 					}
 
 					return ans;
