@@ -5,14 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <chrono>
-#include <vector>
-#include <mutex>
-#include <algorithm>
-#include <pthread.h>
-#include <random>
-#include <atomic>
-#include <ctime>
+
 
 
 //using namespace std;
