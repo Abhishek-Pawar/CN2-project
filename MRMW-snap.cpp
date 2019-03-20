@@ -81,7 +81,7 @@ class MRMWSnap
 					}
 				}
 				
-				if(count == num)
+				if(count != num)
 				{
 					atomic_int ans[num];
 
