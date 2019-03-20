@@ -66,7 +66,7 @@ class MRMWSnap
 			{
 				for(int i = 0 ;i < num ;i++)
 				{
-				    (bb[i].value).store(reg[i].value , memory_order_relaxed);
+				    //(bb[i].value).store(reg[i].value , memory_order_relaxed);
 					bb[i].seq = reg[i].seq;
 					bb[i].pid = reg[i].pid;
 				}
