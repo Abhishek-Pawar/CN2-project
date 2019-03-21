@@ -46,13 +46,13 @@ class MRMWSnap
 	// 		MRMWSnap aa[num];
 			MRMWSnap bb[num];
 
-			for(int i = 0 ;i < num ;i++)
-			{
-				//aa[i] = reg[i];
-				(aa[i].value).store(reg[i].value , memory_order_relaxed);
-				aa[i].seq = reg[i].seq;
-				aa[i].pid = reg[i].pid; 
-			}
+			// for(int i = 0 ;i < num ;i++)
+			// {
+			// 	//aa[i] = reg[i];
+			// 	(aa[i].value).store(reg[i].value , memory_order_relaxed);
+			// 	aa[i].seq = reg[i].seq;
+			// 	aa[i].pid = reg[i].pid; 
+			// }
 
 
 			while(1)
