@@ -205,14 +205,14 @@ int main()
 	// thread snappy = thread(getSnap);
 	// snappy.join();
 
-	for(int i=0 ;i<num ; i++)
-	{
-		writers[i].join();
-	}
+// 	for(int i=0 ;i<num ; i++)
+// 	{
+// 		writers[i].join();
+// 	}
 
 
-	//delete cls;
-	return 0;
+// 	//delete cls;
+// 	return 0;
 
-}
+// }
 
