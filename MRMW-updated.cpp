@@ -17,33 +17,33 @@ atomic_bool term;
 // this is a sample code
 class MRMWSnap
 {
-	public:
-		atomic_int value;
-		int pid;
-		int seq;
+	// public:
+	// 	atomic_int value;
+	// 	int pid;
+	// 	int seq;
 
-		MRMWSnap()
-		{
-			value.store(-1, memory_order_relaxed);
-			pid = -1;
-			seq = 0;
+	// 	MRMWSnap()
+	// 	{
+	// 		value.store(-1, memory_order_relaxed);
+	// 		pid = -1;
+	// 		seq = 0;
 
-		}
+	// 	}
 
 
-		void update_val(int id ,int val)
-		{	
-			seq++;
-			pid = id;
-			value.store( val , std::memory_order_relaxed);
-			HELPSNAP[id] = snap();
+	// 	void update_val(int id ,int val)
+	// 	{	
+	// 		seq++;
+	// 		pid = id;
+	// 		value.store( val , std::memory_order_relaxed);
+	// 		HELPSNAP[id] = snap();
 
-		}
+	// 	}
 
-		atomic_int snap()
-		{
-			set<int> can_help;
-			MRMWSnap aa[num];
+	// 	atomic_int snap()
+	// 	{
+	// 		set<int> can_help;
+	// 		MRMWSnap aa[num];
 			MRMWSnap bb[num];
 
 			for(int i = 0 ;i < num ;i++)
