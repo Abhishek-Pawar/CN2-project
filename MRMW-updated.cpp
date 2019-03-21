@@ -10,49 +10,49 @@
 
 //using namespace std;
 
-atomic_int** HELPSNAP;
+//atomic_int** HELPSNAP;
 //int num, lambda1 ,lambda2 ,k;
 atomic_bool term;
 
-
+// this is a sample code
 class MRMWSnap
 {
-	public:
-		atomic_int value;
-		int pid;
-		int seq;
+	// public:
+	// 	atomic_int value;
+	// 	int pid;
+	// 	int seq;
 
-		MRMWSnap()
-		{
-			value.store(-1, memory_order_relaxed);
-			pid = -1;
-			seq = 0;
+	// 	MRMWSnap()
+	// 	{
+	// 		value.store(-1, memory_order_relaxed);
+	// 		pid = -1;
+	// 		seq = 0;
 
-		}
+	// 	}
 
 
-		void update_val(int id ,int val)
-		{	
-			seq++;
-			pid = id;
-			value.store( val , std::memory_order_relaxed);
-			HELPSNAP[id] = snap();
+	// 	void update_val(int id ,int val)
+	// 	{	
+	// 		seq++;
+	// 		pid = id;
+	// 		value.store( val , std::memory_order_relaxed);
+	// 		HELPSNAP[id] = snap();
 
-		}
+	// 	}
 
-		atomic_int snap()
-		{
-			set<int> can_help;
-			MRMWSnap aa[num];
+	// 	atomic_int snap()
+	// 	{
+	// 		set<int> can_help;
+	// 		MRMWSnap aa[num];
 			MRMWSnap bb[num];
 
-			for(int i = 0 ;i < num ;i++)
-			{
-				//aa[i] = reg[i];
-				(aa[i].value).store(reg[i].value , memory_order_relaxed);
-				aa[i].seq = reg[i].seq;
-				aa[i].pid = reg[i].pid; 
-			}
+			// for(int i = 0 ;i < num ;i++)
+			// {
+			// 	//aa[i] = reg[i];
+			// 	(aa[i].value).store(reg[i].value , memory_order_relaxed);
+			// 	aa[i].seq = reg[i].seq;
+			// 	aa[i].pid = reg[i].pid; 
+			// }
 
 
 			while(1)
